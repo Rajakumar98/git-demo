@@ -1,0 +1,74 @@
+//JSON
+//Array of JSON Object
+//copy by value and reference
+//API
+//JSON structure is the Output of  API 
+//JSON:javascript object notation 
+//JSON:Javascript object Notation
+var stu=[{
+  "name":"john doe",
+  "age" :"23"
+},{
+  "name":"mary doe",
+  "age" :"24"
+}];
+//Syntax:Objectname[index].keyname
+console.log();
+
+var res=[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    
+  }]
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+//XML-HTTP Request
+//it is used to interact with the servers via api
+//data has been already in server ,we need to bring it to client/browser
+//4 steps
+
+//1st step: create a XHR object
+var request = new XMLHttpRequest();
+//2nd Step: API URL
+//.open method
+//2 parameters
+request.open("GET","https://restcountries.com/v2/all");
+//3rd step:establishing the bridge
+request.send();
+//4th step: once the data successfully received from server
+//onload is an event
+//when we use: once the data /server is showing 200 status code 
+request.onload=function(){
+var result=JSON.parse(request.response);
+console.log(result);
+}

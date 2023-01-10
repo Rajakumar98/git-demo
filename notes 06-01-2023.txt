@@ -1,0 +1,121 @@
+//data types
+//loops
+//arrays and Objects
+//accessing
+//Array of Objects
+
+//primitive data types
+//inbuilt data types
+//Number string,Boolean
+//Numbers : decimals,floating points..
+//Strings:characters,bunch of words
+//Boolean:true or false >,<,>=,<=, 
+
+//complex data types-user defined data types
+//Array //
+//NAN
+//Object it is a key:value pair
+
+//Syntax:var objectname={}
+//John doe  
+var student={
+    name:"johndoe",
+    age:23,
+    mail:"abc@gui.in",
+    dob:23/12/1998,
+    address:"san fransico usa"
+}
+
+// var arr=[12,13,14,15,true,33.33333];
+// console.log(arr.length);
+// arr[45]="guvi";
+// console.log(typeof(arr));
+var student={
+    name:"johndoe",
+    age:23,
+    mail:"abc@gui.in",
+    dob:23/12/1998,
+    address:"san fransico usa"
+}
+//Accessing the Objects
+//2 important Methods
+//1 st method "."method
+//Syntax:console.log(objectname.keyname);
+
+//box method
+//Syntax:console.log(objectname["keyname"]);
+//keys are always enclosed in double quotes expect in 1 case
+console.log(student["name"]);
+
+//1 st method use it in normal accessing and printing
+//2nd Method use it for printing the Objects One by One
+
+//for-in loop for the Objects
+//it is applicable for the k:v structure
+//Syntax:for(var key in objectname){}
+
+//here key is user defined/user choice it will be considered as the key
+
+for(var name in student){
+console.log(student[i]);
+}
+
+//How to Insert a Key ??
+//gender:male
+//Syntax:Objectname.keyname=value;
+//attendance:["mon","tue","wed"]
+student.gender="male";
+student.attendance=["mon","tue","wed"];
+
+// var arr=[12,13,14,15,true,33.33333];
+// console.log(arr.length);
+// arr[45]="guvi";
+// console.log(typeof(arr));
+var student={
+    name:"johndoe",
+    age:23,
+    mail:"abc@gui.in",
+    dob:23/12/1998,
+    address:"san fransico usa"
+}
+//How to Insert a Key ??
+//gender:male
+//Syntax:Objectname.keyname=value;
+//attendance:["mon","tue","wed"]
+student.gender="male";
+student.attendance=["mon","tue","wed"];
+console.log(student);
+
+// for(var i=0;i<student.attendance.length;i++){
+// console.log(student.attendance[i]);
+// }
+//for-in
+var a=student.attendance;
+for(var i in a){
+console.log(a[i]);
+}
+//Print the Output of the attendance
+//Output:
+//mon
+//tue
+//wed
+
+// var arr=[12,13,14,15,true,33.33333];
+// console.log(arr.length);
+// arr[45]="guvi";
+// console.log(typeof(arr));
+var student={
+    name:"johndoe",
+    age:23,
+    mail:"abc@gui.in",
+    dob:23/12/1998,
+    address:"san fransico usa"
+}
+//update
+//Syntax:objectname.keyname="guvi";
+//var mark-anderson
+
+//delete
+//delete objectname.keyname
+delete student.dob;
+console.log(student);

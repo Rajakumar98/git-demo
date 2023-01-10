@@ -1,0 +1,184 @@
+
+
+1>.
+
+/* const str = 'I was born on 12 octover 1998';
+const charArr = str.split(' ');
+console.log(charArr)
+let largerNum = -1;
+
+// WE WILL TRY TO ITERATE THE CHAR ARRAY AND FIND THE BIGGER NUMBER
+charArr.forEach((e) => {
+const num = Number(e);
+    if(num) {
+        largerNum = num > largerNum ? num : largerNum;
+    }
+});
+ 
+ for(let i = 0; i < charArr.length; i++) {
+    const num = Number(charArr[i]);
+    if(num && num > largerNum) {
+        largerNum = num
+    }
+ }
+ 
+console.log(largerNum); */
+
+const arr = [1, 1, 1, 2, 3, 4, 4]
+const frequency = {};
+
+
+function getKeyForValue(data = {}, value = '') {
+   return Object.keys(data).find((d, i) => {
+      if(data[d] === value) {
+         return data[d] === value;
+      }
+   });
+}
+
+ for(let i = 0; i < arr.length; i++) {
+    if(frequency[arr[i]]) {
+      frequency[arr[i]] = frequency[arr[i]] + 1;
+    } else {
+      frequency[arr[i]] = 1;
+    }
+ }
+ 
+ const descValues = Object.values(frequency).sort((a, b) => b - a);
+ 
+ const descKeys = descValues.map((d, i) => getKeyForValue(frequency, d));
+ console.log(descKeys)
+ 
+// console.log(Object.entries(frequency));
+ 
+
+2>.
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+// console.log(userInput)
+ 
+ const walls = Number(userInput[0]);
+ 
+ const walls_height = userInput[1].split(" ");
+ 
+ let air_unit = 0;
+ 
+ for(let i=0; i<walls -1;i++){
+     
+     const sum = walls_height[i] - walls_height[i +1];
+    if(sum > -1){
+        air_unit=sum;
+    }
+ }
+ 
+ 
+ console.log(air_unit);
+
+  //end-here
+});
+
+3>.
+
+/* const str = 'I was born on 12 octover 1998';
+const charArr = str.split(' ');
+console.log(charArr)
+let largerNum = -1;
+
+// WE WILL TRY TO ITERATE THE CHAR ARRAY AND FIND THE BIGGER NUMBER
+charArr.forEach((e) => {
+const num = Number(e);
+    if(num) {
+        largerNum = num > largerNum ? num : largerNum;
+    }
+});
+ 
+ for(let i = 0; i < charArr.length; i++) {
+    const num = Number(charArr[i]);
+    if(num && num > largerNum) {
+        largerNum = num
+    }
+ }
+ 
+console.log(largerNum); */
+
+/* const arr = [1, 1, 1, 2, 3, 4, 4]
+const frequency = {};
+
+
+function getKeyForValue(data = {}, value = '') {
+   return Object.keys(data).find((d, i) => {
+      if(data[d] === value) {
+         return data[d] === value;
+      }
+   });
+}
+
+ for(let i = 0; i < arr.length; i++) {
+    if(frequency[arr[i]]) {
+      frequency[arr[i]] = frequency[arr[i]] + 1;
+    } else {
+      frequency[arr[i]] = 1;
+    }
+ }
+ 
+ const descValues = Object.values(frequency).sort((a, b) => b - a);
+ 
+ const descKeys = descValues.map((d, i) => getKeyForValue(frequency, d));
+ console.log(descKeys)
+  */
+// console.log(Object.entries(frequency));
+
+/* var str = 'Aamaz';
+var fI = str[0];
+var mid = Math.floor(str.length / 2);
+var mI = str[mid];
+var lI = str[str.length]; */
+
+
+/* var str = 'I am john cena cena john';
+var frequency = {};
+
+var strArray = str.split(' ');
+
+ for(let i = 0; i < strArray.length; i++) {
+    if(frequency[strArray[i]]) {
+      frequency[strArray[i]] = frequency[strArray[i]] + 1;
+    } else {
+      frequency[strArray[i]] = 1;
+    }
+ }
+ 
+ console.log(frequency);
+
+let finalStr = [];
+for(let x in frequency) {
+  if(frequency[x] === 1) {
+    finalStr.push(x);
+  }
+}
+
+console.log(finalStr.join(' ')); */
+
+const inputs = ['guvi', 'geek'];
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+var x = 'e';
+
+console.log(vowels.indexOf(x));
+
